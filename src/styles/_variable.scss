@@ -1,0 +1,44 @@
+
+.ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.z1 {
+  z-index: 1;
+}
+
+.z2 {
+  z-index: 2;
+}
+
+.z3 {
+  z-index: 3;
+}
+
+.z4 {
+  z-index: 4;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+@mixin minFontSize ($fontSize) {
+  display: block;
+  $scale: 2;
+  font-size: $fontSize * $scale;
+  transform-origin: 0 50%;
+  transform: scale(calc(1/$scale));
+}
+
+@mixin bgImg($url, $bgSize: contain, $bgPosition: top center) {
+  background: url($url) $bgPosition/$bgSize no-repeat;
+}
